@@ -7,8 +7,10 @@ import org.quiltmc.qsl.block.extensions.api.QuiltBlockSettings;
 
 public class SweetCropsBlocks {
 	public static final StrawberryBushBlock STRAWBERRY_BUSH = new StrawberryBushBlock(QuiltBlockSettings.copy(Blocks.SWEET_BERRY_BUSH));
+	public static final MintBlock MINT = new MintBlock(QuiltBlockSettings.copy(Blocks.BEETROOTS));
 
 	public static void initialize() {
 		Registry.register(Registry.BLOCK, new Identifier("sweet_crops", "strawberry_bush"), STRAWBERRY_BUSH);
+		Registry.register(Registry.BLOCK, new Identifier("sweet_crops", "mint"), MINT);
 	}
 }
