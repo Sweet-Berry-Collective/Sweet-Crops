@@ -1,5 +1,7 @@
 package io.github.sweetberrycollective;
 
+import io.github.sweetberrycollective.block.SweetCropsBlocks;
+import io.github.sweetberrycollective.item.SweetCropsItems;
 import org.quiltmc.loader.api.ModContainer;
 import org.quiltmc.qsl.base.api.entrypoint.ModInitializer;
 import org.slf4j.Logger;
@@ -14,5 +16,8 @@ public class SweetCrops implements ModInitializer {
 	@Override
 	public void onInitialize(ModContainer mod) {
 		LOGGER.info("Hello Quilt world from {}!", mod.metadata().name());
+
+		SweetCropsItems.initialize();
+		SweetCropsBlocks.initialize();
 	}
 }
