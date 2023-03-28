@@ -13,9 +13,13 @@ public class SweetCropsItems {
 	public static final Item MINT = new AliasedBlockItem(SweetCropsBlocks.MINT, new QuiltItemSettings());
 	public static final Item MINT_LEAF = new Item(new QuiltItemSettings().food(FoodComponents.BEETROOT));
 
+	public static void register(Item item, String id) {
+		Registry.register(Registry.ITEM, new Identifier("sweet_crops", id), item);
+	}
+
 	public static void initialize() {
-		Registry.register(Registry.ITEM, new Identifier("sweet_crops", "strawberry"), STRAWBERRY);
-		Registry.register(Registry.ITEM, new Identifier("sweet_crops", "mint"), MINT);
-		Registry.register(Registry.ITEM, new Identifier("sweet_crops", "mint_leaf"), MINT_LEAF);
+		register(STRAWBERRY, "strawberry");
+		register(MINT, "mint");
+		register(MINT_LEAF, "mint_leaf");
 	}
 }
