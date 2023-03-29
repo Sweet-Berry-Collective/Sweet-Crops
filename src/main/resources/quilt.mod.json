@@ -19,7 +19,8 @@
 		},
 		"intermediate_mappings": "net.fabricmc:intermediary",
 		"entrypoints": {
-			"init": "io.github.sweetberrycollective.SweetCrops"
+			"init": "io.github.sweetberrycollective.SweetCrops",
+			"client_init": "io.github.sweetberrycollective.SweetCropsClient"
 		},
 		"depends": [
 			{
