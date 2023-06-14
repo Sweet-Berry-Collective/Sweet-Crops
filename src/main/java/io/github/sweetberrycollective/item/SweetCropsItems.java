@@ -4,8 +4,9 @@ import io.github.sweetberrycollective.block.SweetCropsBlocks;
 import net.minecraft.item.AliasedBlockItem;
 import net.minecraft.item.FoodComponents;
 import net.minecraft.item.Item;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
 import org.quiltmc.qsl.item.setting.api.QuiltItemSettings;
 
 public class SweetCropsItems {
@@ -14,7 +15,7 @@ public class SweetCropsItems {
 	public static final Item MINT_LEAF = new Item(new QuiltItemSettings().food(FoodComponents.BEETROOT));
 
 	public static void register(Item item, String id) {
-		Registry.register(Registry.ITEM, new Identifier("sweet_crops", id), item);
+		Registry.register(Registries.ITEM, new Identifier("sweet_crops", id), item);
 	}
 
 	public static void initialize() {
